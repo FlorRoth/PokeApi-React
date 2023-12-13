@@ -1,7 +1,7 @@
 import './styles/index.css'
 import { NavBar } from "./components/navbar/NavBar";
 import { usePaginate } from './hooks/usePaginate';
-import { PokemonQuery } from './components/PokemonQuery';
+import { PokemonQuery } from './data/PokemonQuery';
 
 
 function App() {
