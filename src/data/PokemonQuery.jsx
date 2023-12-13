@@ -35,6 +35,7 @@ export const PokemonQuery = ({limit, offset,page,onNext,onPrev,}) => {
           if (loading) {
             present({
               message: 'Loading...',
+              duration: 2000,
               spinner: 'circles',
             });
             return null; 
