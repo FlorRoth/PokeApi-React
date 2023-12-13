@@ -1,24 +1,47 @@
 import React from 'react'
 import { Card } from './Card';
 
-import {pokemocitos} from '../data/example';
+import { IonGrid,IonRow,IonCol } from '@ionic/react';
 
+export const Pokemons = ({data,page,onNext,onPrev}) => {
 
-
-export const Pokemons = () => {
   return (
-  
-    <div className="album py-5 ">
-        <div className="container-fluid">
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
-                {pokemocitos.map((item,index) => (
-                <div className="col" key={index}>
-                    <Card dataPokemon={item}/>
-                </div>  
-                ))}
-            </div>
-        </div>
-    </div> 
+
+    <IonGrid>
+    <IonRow className="ion-justify-content-center">
+      {data.map((item, index) => (
+        <IonCol size="12" size-sm="6" size-md="6" size-lg="3" key={index} className='g-3'>
+          <Card dataPokemon={item} />
+        </IonCol>
+      ))}
+    </IonRow>
+    <IonRow className="ion-justify-content-center">
+        <IonCol>
+            <nav>
+                <ul className="pagination pagination-lg justify-content-center">
+                    <li className="page-item" onClick={onPrev}>
+                    <a className="btn page-link bg-primary text-light"  aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                    </li>
+                    <li className="page-item bg-primary text-light"><a className="page-link" >{page}</a></li>
+                    <li className="page-item" onClick={onNext}>
+                    <a className=" btn page-link bg-primary text-light"  aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </IonCol>
+    </IonRow>
+
+ 
+
+  </IonGrid>
+
+
+
 
     
   )
