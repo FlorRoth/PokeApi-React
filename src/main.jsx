@@ -1,10 +1,21 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import ReactDOM from "react-dom";
 import App from './App.jsx'
 
+import ApolloClient, { gql } from 'apollo-boost'
+import { ApolloProvider, Query } from 'react-apollo'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+const client = new ApolloClient({
+  uri: "https://beta.pokeapi.co/graphql/v1beta"
+});
+
+
+
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(
+  <ApolloProvider client={client}>
     <App />
-  </React.StrictMode>,
-)
+  </ApolloProvider>,
+  rootElement
+);
