@@ -12,7 +12,7 @@ Includes a feature that allows the user to update the Pokémon list using pagina
 
 ## Installation and execution
 1) Clone repository.
-2) Run ```npm install --legacy-peer-deps```.
+2) Run ```npm install ```.
 
 #### Starting the services: 
     npm run dev
