@@ -10,17 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@apollo/client": "^3.8.8",
-    "@ionic/react": "^7.6.0",
+    "@apollo/client": "^3.2.7",
+    "@ionic/react": "^5.5.0",
     "apollo-boost": "^0.4.9",
-    "graphql": "^16.8.1",
-    "react": "^18.2.0",
+    "graphql": "^14.3.1",
+    "react": "^16.14.0",
     "react-apollo": "^3.1.5",
-    "react-dom": "^18.2.0"
+    "react-dom": "^16.13.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
     "@vitejs/plugin-react": "^4.0.3",
     "eslint": "^8.45.0",
     "eslint-plugin-react": "^7.32.2",

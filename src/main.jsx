@@ -1,5 +1,5 @@
 import React from 'react'
-import {createRoot} from "react-dom";
+import ReactDOM from "react-dom";
 import App from './App.jsx'
 
 import ApolloClient, { gql } from 'apollo-boost'
@@ -12,10 +12,10 @@ const client = new ApolloClient({
 
 
 
-const root = document.getElementById('root');
-const rootInstance = createRoot(root);
-rootInstance.render(<ApolloProvider client={client}>
-  <App />
-</ApolloProvider>,);
-
-
+const rootElement = document.getElementById("root");
+ReactDOM.render(
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>,
+  rootElement
+);
